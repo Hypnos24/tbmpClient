@@ -1,0 +1,130 @@
+.r-main-div{
+    width: 100%;
+	height: 100%;
+	background-color:#FFFFFF;
+}
+.login_head_div{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+.login_body_div{
+    float: left;
+    width: 100%;
+    height: 80%;
+}
+.login-img{
+    width: 12rem;
+    height: 6rem;
+    margin-top: 10%;
+}
+.l-ipt-div{
+    float: left;
+    width: 90%;
+    height: 3rem;
+	margin: 3rem 5% 0 5%;
+	background-color: #EBEBEB;
+	border:1px solid #CCCCCC;
+}
+.l-ipt-div2{
+    float: left;
+    width: 90%;
+    height: 3rem;
+	margin: 0 5% 2rem 5%;
+	background-color: #EBEBEB;
+	border-left:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+}
+.l-ipt-left{
+    width: 15%;
+    float: left;
+    height: 100%;
+    text-align: center;
+}
+.l-ipt-img{
+    width: 40%;
+    height: 40%;
+    margin-top: 30%;
+}
+.l-ipt{
+    border: none;
+    height: 95%;
+    width: 100%;
+    background-color:#EBEBEB;
+}
+.l-ipt-right{
+    width: 85%;
+	height: 100%;
+	float:left;
+}
+.l-two-div{
+    width: 100%;
+    float: left;
+    color: #ffffff;
+    margin-top: 0.5rem;
+}
+.l-tl-div{
+    float: left;
+    margin-left: 14%;
+    width: 36%;
+}
+.l-tr-div{
+    float: left;
+    margin-right: 15%;
+    width: 35%;
+    text-align: right;
+}
+.l-three-div{
+    margin-top: 1rem;
+    float: left;
+    width: 100%;
+    height: 7%;
+    min-height: 2rem;
+}
+.l-trl-div{
+    width: 35%;
+    margin-left: 15%;
+    float: left;
+    height: 100%;
+}
+.l-trr-div{
+	width: 35%;
+    margin-right: 15%;
+    float: right;
+    height: 100%;
+}
+.l-four-div{
+    margin: 1rem 15% 0 15%;
+    float: left;
+    width: 70%;
+    height: 7%;
+    min-height: 2rem;
+}
+
+.creGroup-ipt-div{
+	float: left;
+	width: 100%;
+	height: 8%;
+}
+.creGroup-ipt-left{
+    float: left;
+    width: 16%;
+    height: 100%;
+}		
+.creGroup-ipt-right{
+    float: left;
+    width: 79%;
+    height: 100%;
+}
+.creGroup-ipt-img{
+    width: 86%;
+	margin: 5% 0% 5% 1%;
+}
+.creGroup-ipt{
+    width: 100%;
+    float: left;
+    height: 47%;
+    margin: 4.3% 0% 0% -5%;
+    border-radius: 0.3rem
+}
