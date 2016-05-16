@@ -6,19 +6,40 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
 		<script src="../js/mui.min.js"></script>
-		<link href="../css/mui.min.css" rel="stylesheet" />
-		<script type="text/javascript" charset="UTF-8">
-			mui.init();
-		</script>
+		<link href="../css/login.css" rel="stylesheet" type="text/css" />
+		<link href="../css/register.css" rel="stylesheet" type="text/css" />
+		<link href="../css/common.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../js/login.js"></script>
+		<script type="text/javascript" src="../js/register.js"></script>
 	</head>
 
-	<body>
-
-		<div>
-			<div style="color: ;"><h2>盾构先锋 TBMP</h1></div>
-			<div>
-				<input type="text" name="username" id="username" value="" />
-				<input type="password" name="password" id="password" value="" />
+	<body class="w-body">
+		<div class="r-main-div">
+			<div class="login_head_div">
+				<img id="logo" class="login-img" src="../images/logo.png" />
+			</div>
+			<div class="login_body_div" style="background-color:#FFFFFF;">
+				<div class="l-ipt-div">
+					<div class="l-ipt-left"><img class="l-ipt-img" src="../images/user.png"></div>
+					<div class="l-ipt-right">
+						<input id="login_account" class="l-ipt" type="text" placeholder="请输入用户名">
+					</div>
+				</div>
+				<div class="l-ipt-div2">
+					<div class="l-ipt-left"><img class="l-ipt-img" src="../images/password.png"></div>
+					<div class="l-ipt-right">
+						<input id="login_password" class="l-ipt" type="password" placeholder="请输入密码11">
+					</div>
+				</div>
+				<div class="l-two-div">
+					<div class="l-tl-div">
+						<input style="margin-top:0" class="float-left" type="checkbox" id="remember_login"><span class="float-left" style="color: #000000;">&nbsp;记住账号</span></div>
+					<div class="l-tl-div">
+						<input style="margin-top:0" class="float-left" type="checkbox" id="remember_login"><span class="float-left" style="color: #000000;">&nbsp;自动登录</span></div>
+				</div>
+				<div class="l-four-div">
+					<button class="btn-login w100 h100" id="create_mass" onclick="nextPage();">登录系统</button>
+				</div>
 			</div>
 		</div>
 
