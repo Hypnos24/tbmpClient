@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>通知公告</title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link href="../css/common.css" rel="stylesheet" type="text/css" />
+		<link href="../css/notice.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//展开-隐藏底部菜单
+			var flag = true;
+			function bindChangePage () {
+				if(flag){
+					bottomDivUp('epi_tx_dialog',120);
+					flag = false;
+				}
+			}	
+			function closeEpiDlg () {
+				$('#epi_tx_dialog').animate({top:"100%"},'slow',function(){
+					$('#epi_tx_dialog').hide();
+					flag = true;
+				});
+			}
+		</script>
+
+		<style>
+			.ca-body{
+				background-color: #EBEBEB;overflow: hidden;
+			}
+			.clear{
+				clear: both;
+			}
+		</style>
+	</head>
+	<body class="w-body ca-body">
+		<div class="head-bar">
+			<div class="bar-left">
+				<a href="project-abstract.html"><img class="back-img" src="../images/arrows-left.png"></a>
+			</div>
+			<div class="ps-bar-font">
+				<table>
+					<tr><td>通知公告</td></tr>
+				</table>
+			</div>
+		</div>
+		
+		<div style="margin-top: 3%;"></div>
+		<div style="background-color: #FFFFFF;height: 100%;">
+		<div class="n-content">
+			<div class="n-content-left"> <!--content左边-->
+				<div class="n-content-left-top">
+					<span>请提交2015年的年终总结</span>
+				</div>
+				<div class="n-content-left-bottom">
+					<span style="color: #007AFF;margin-right: 1rem;">通知</span>
+					<span style="color: #007AFF;margin-right: 1rem;">王经理</span>
+					<span style="color: orange;">1月12日</span>
+				</div>
+			</div>
+			<div class="n-content-right">
+				<a href="project-abstract.html" style="color: #CCCCCC;"><span> > </span></a>
+			</div>
+		</div>
+		<div class="n-content">
+			<div class="n-content-left"> <!--content左边-->
+				<div class="n-content-left-top">
+					<span>请提交2015年的年终总结</span>
+				</div>
+				<div class="n-content-left-bottom">
+					<span style="color: #007AFF;margin-right: 1rem;">公告</span>
+					<span style="color: #007AFF;margin-right: 1rem;">项目部</span>
+					<span style="color: orange;">1月13日</span>
+				</div>
+			</div>
+			<div class="n-content-right">
+				<a href="project-abstract.html" style="color: #CCCCCC;"><span> > </span></a>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

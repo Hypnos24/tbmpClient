@@ -38,6 +38,7 @@ body{
     background-color: #ffffff;
 	font-family: "微软雅黑",黑体,宋体,Arial;
 	font-size: 0.8rem;
+	overflow: hidden;
 }
 .gray-body{
 	margin:0 0 0 0;

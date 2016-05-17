@@ -1,0 +1,99 @@
+.head-bar{
+    text-align: center;
+    height: 7%;
+    width: 100%;
+    background-color: #FFFFFF;
+    min-height: 2rem;
+    border-bottom: solid 1px #cbcbcb;
+}
+.bar-left{
+    height: 100%;
+    width: 25%;
+    float: left;
+    font-size: 1.1rem;
+    color: #000000;
+}
+.back-img{
+    float: left;
+    width: 30%;
+    height: 100%;
+    margin-left: 2%;
+}
+.bar-font{
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    float: left;
+    font-size: 1.1rem;
+    color: #000000;
+}
+.bar-font table{
+    height: 100%;
+    width: 100%;
+}
+.main-div{
+	width: 90%;
+	height: 50%;
+	margin: 5%;
+}
+.main-div-one{
+	margin-top: 10%;
+}
+.main-div-one table{
+	width: 100%;
+	border: solid 1px #cbcbcb ;
+}
+
+.main-div-one th{
+	height: 2rem;
+	text-align: center;
+	background-color: #dbeef4;
+	border: solid 1px #cbcbcb ;
+}
+.main-div-one tbody td{
+	height: 1.8rem;
+	text-align: center;
+	border: solid 1px #cbcbcb ;
+	
+}
+.main-div-one-picture-g{
+	height: 0.8rem;
+	width: 0.8rem;
+	border-radius: 1rem;
+	background-color: green;
+	display:-moz-inline-box;
+	display:inline-block;
+}
+.main-div-one-picture-r{
+	height: 0.8rem;
+	width: 0.8rem;
+	border-radius: 1rem;
+	background-color: red;
+	display:-moz-inline-box;
+	display:inline-block;
+}
+.main-div-one-picture-y{
+	height: 0.8rem;
+	width: 0.8rem;
+	border-radius: 1rem;
+	background-color: yellow;
+	display:-moz-inline-box;
+	display:inline-block;
+}
+.main-div-one-picture-b{
+	height: 0.8rem;
+	width: 0.8rem;
+	border-radius: 1rem;
+	background-color: blue;
+	display:-moz-inline-box;
+	display:inline-block;
+}
+.main-div-one-picture-o{
+	height: 0.8rem;
+	width: 0.8rem;
+	border-radius: 1rem;
+	background-color: orange;
+	display:-moz-inline-box;
+	display:inline-block;
+}
+
