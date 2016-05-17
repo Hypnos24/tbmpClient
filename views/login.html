@@ -9,7 +9,8 @@
 		<link href="../css/login.css" rel="stylesheet" type="text/css" />
 		<link href="../css/register.css" rel="stylesheet" type="text/css" />
 		<link href="../css/common.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/login.js"></script>
+		<script type="text/javascript" src="../js/register.js"></script>
 	</head>
 
 	<body class="w-body">
@@ -27,7 +28,7 @@
 				<div class="l-ipt-div2">
 					<div class="l-ipt-left"><img class="l-ipt-img" src="../images/password.png"></div>
 					<div class="l-ipt-right">
-						<input id="login_password" class="l-ipt" type="password" placeholder="请输入密码">
+						<input id="login_password" class="l-ipt" type="password" placeholder="请输入密码11">
 					</div>
 				</div>
 				<div class="l-two-div">
@@ -37,28 +38,11 @@
 						<input style="margin-top:0" class="float-left" type="checkbox" id="remember_login"><span class="float-left" style="color: #000000;">&nbsp;自动登录</span></div>
 				</div>
 				<div class="l-four-div">
-					<button class="btn-login w100 h100" id="create_mass" onclick="login();">登录系统</button>
+					<button class="btn-login w100 h100" id="create_mass" onclick="nextPage();">登录系统</button>
 				</div>
 			</div>
 		</div>
 
 	</body>
-	<script>
-		function login(){
-			var username = $("#login_account").val();
-			var password = $("#login_password").val();
-			$.post(
-				"http://192.168.60.19:8080/tbmp/rest/users/login",
-				{'username':username,'password':password},
-				function(data){
-					if(data.respCode == 0){
-						alert(data.respDesc);
-						window.location.href = "main.html";
-					}else{
-						alert(data.respDesc);
-					}
-				},'json');
-		}
-	</script>
 
 </html>
