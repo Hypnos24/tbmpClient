@@ -1,4 +1,4 @@
-.head-bar{
+/*.head-bar{
     text-align: center;
     height: 7%;
     width: 100%;
@@ -30,11 +30,9 @@
 .bar-font table{
     height: 100%;
     width: 100%;
-}
+}*/
 .main-div{
-	width: 90%;
-	height: 50%;
-	margin: 5%;
+	margin: 0 3% 3% 3%;
 }
 .main-div-one{
 	margin-top: 10%;

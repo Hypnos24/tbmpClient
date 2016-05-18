@@ -5,11 +5,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
-		<script src="../js/mui.min.js"></script>
 		<link href="../css/login.css" rel="stylesheet" type="text/css" />
 		<link href="../css/register.css" rel="stylesheet" type="text/css" />
 		<link href="../css/common.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script src="../js/mui.min.js"></script>
 	</head>
 
 	<body class="w-body">
@@ -52,7 +52,6 @@
 				{'username':username,'password':password},
 				function(data){
 					if(data.respCode == 0){
-						alert(data.respDesc);
 						window.location.href = "project-abstract.html";
 					}else{
 						alert(data.respDesc);
