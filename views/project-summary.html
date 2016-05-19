@@ -7,34 +7,41 @@
 		<link href="../css/common.css" rel="stylesheet" type="text/css" />
 		<link href="../css/project-summary.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/iconfont.css" />
 		<script type="text/javascript" src="../js/jquery.js"></script>
 		<script src="../js/mui.min.js"></script>
-		<style>
-			.ca-body{
-				background-color: #EBEBEB;overflow-x: hidden;
-			}
-			.clear{
-				clear: both;
-			}
-		</style>
+		<script>
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+		</script>
+		<script>
+			document.getElementById('return_ project_').addEventListener('tap', function() {
+			  		//打开关于页面
+			  		mui.openWindow({
+				    	url: 'project-abstract.html', 
+			    		id:'abstract'
+	  			});
+			});
+			
+			var wv = plus.webview.open('project-abstract.html','abstract',{'popGesture':'close'});
+			var wv=plus.webview.currentWebview();
+			// 关闭侧滑返回功能
+			wv.setStyle({'popGesture':'none'});
+			// 侧滑返回后关闭webview
+			wv.setStyle({'popGesture':'close'});
+			// 侧滑返回后隐藏webview
+			wv.setStyle({'popGesture':'hide'});
+		</script>
 	</head>
-	<body class="w-body ca-body w100 h100">
-				<div class="head-bar">
-					<div class="bar-left">
-						<a href="project-abstract.html"><img class="back-img" src="../images/arrows-left.png"></a>
-					</div>
-					<div class="ps-bar-font">
-						<table>
-							<tr><td>项目汇总</td></tr>
-						</table>
-					</div>
-					<div class="bar-right">
-						<img class="back-right-img" src="../images/bar-note.png">
-						<div class="bar-right-two">
-							<span>12</span>
-						</div>
-					</div> 
-				</div>
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id = "return_ project_"></a>
+			<h1 class="mui-title">项目汇总</h1>
+			<a class="mui-icon iconfont icon-icon13 mui-pull-right" style="color: #C7C7CC;"><span class="mui-badge" style="top: 5px;left: 70%;">9</span></a>
+			
+		</header>
+		<div class="mui-content">
 				<div class="ps-one-div">
 					<div class="ps-one-div-left"><img class="ps-one-img-left" src="../images/shanghai-subway.png"></div>
 					<div class="ps-one-div-right">
@@ -167,6 +174,6 @@
 					</div>
 				</div>
 				
-				
+		</div>		
 	</body>
 </html>

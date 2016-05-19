@@ -290,6 +290,15 @@
 	margin-left: 5%;
 }
 
+.ps-badge {
+	font-size: 12px;
+	line-height: 1;
+	display: inline-block;
+	padding: 3px 6px;
+	color: #333;
+	border-radius: 100px;
+	background-color: rgba(0, 0, 0, .15)
+}
 
 
 

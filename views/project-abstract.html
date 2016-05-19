@@ -16,6 +16,7 @@
 		<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;">
 			<a class="mui-icon mui-icon-left-nav mui-pull-left" href="login.html"></a>
 			<h1 class="mui-title">项目摘要</h1>
+			<button type="button" id="toDetails_" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">汇总</button>
 		</header>
 		<div class="mui-content">
 			<div class="main-div">
@@ -26,6 +27,12 @@
 			</div>
 		</div>
 	</body>
+	
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+	</script>
 
 	<script>
 		$(function() {
@@ -63,9 +70,6 @@
 						}
 						result += '</tbody></table>';
 						$("#main_project_").html(result);
-						var todo = "";
-						todo +='<button type="button" class="mui-btn mui-btn-primary mui-btn-block" onclick="window.location.href = \'project-summary.html\'">项目汇总</button>';
-						$("#to_all_project_detail").html(todo);
 					} else {
 						result += '<h1>暂无项目</h1>';
 						$("#main_project_").html(result);
@@ -74,6 +78,16 @@
 				}
 			);
 		});
+		
 	</script>
-
+	
+	<script>
+		document.getElementById('toDetails_').addEventListener('tap', function() {
+	  //打开关于页面
+	  mui.openWindow({
+	    url: 'project-summary.html', 
+	    id:'summary'
+	  });
+	});
+	</script>
 </html>
