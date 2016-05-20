@@ -15,50 +15,56 @@
 		<div class="mui-content">
 			<h1 style="text-align: center;color: #104780;margin-top:25% ;">盾构先锋 TBMP</h1>
 			<div style="margin-top: 20%;">
-				<div class="mui-input-row">
-					<input type="text" class="mui-input-clear" placeholder="带清除按钮的输入框">
-				</div>
-				<div class="mui-input-row mui-password">
-					<input type="password" class="mui-input-password">
-				</div>
-				
-				<div class="mui-content-padded" style="margin: 5px;">
-				
-				<div class="mui-input-row mui-password">
-					<input type="password" class="mui-input-password">
-				</div>
-				<form class="mui-input-group">
-					
+				<form class="mui-input-group" style="">
 					<div class="mui-input-row">
 						<label>Input</label>
-						<input type="text" class="mui-input-clear" placeholder="带清除按钮的输入框">
+						<input type="text" id="login_account" class="mui-input-clear" placeholder="请输入账号">
+					</div>
+					<div class="mui-input-row mui-password">
+						<label>Input</label>
+					<input type="password" id="login_password" class="mui-input-password" placeholder="请输入密码">
 					</div>
 				</form>
-
 			</div>
-				
-				
+			<div class="l-two-div">
+				<div class="l-tl-div">
+					<input style="margin-top:0" class="float-left" type="checkbox" id="remember_login"><span class="float-left" style="color: #000000;">&nbsp;记住账号</span>
+				</div>
+				<div class="l-tl-div">
+					<input style="margin-top:0" class="float-left" type="checkbox" id="remember_login"><span class="float-left" style="color: #000000;">&nbsp;自动登录</span>
+				</div>
 			</div>
-			
-				
+			<div class="mui-content-padded" style="margin-top: 5rem;">
+		        <button type="button" class="mui-btn mui-btn-primary mui-btn-block" onclick="login();">登陆系统</button>
+			</div>	
 		</div>
 	</body>
 	<script>
 		function login() {
-			var username = $("#login_account").val();
-			var password = $("#login_password").val();
+			var username = $("#login_account").val().trim();
+			var password = $("#login_password").val().trim();
+			if(username == ""){
+				mui.toast("用户名不能为空");
+				return;
+			}if(password == ""){
+				mui.toast("密码不能为空");
+				return;
+			}
 			$.post(
 				"http://192.168.60.19:8080/tbmp/rest/users/login", {
 					'username': username,
 					'password': password
 				},
 				function(data) {
+					console.log(1111);
 					if (data.respCode == 0) {
-						window.location.href = "project-abstract.html";
+						window.location.href = 'project-abstract.html';
 					} else {
-						alert(data.respDesc);
+						console.log(0000);
+						mui.toast(data.respDesc);
+						return false;
 					}
-				}, 'json');
+				},'json');
 		}
 	</script>
 
