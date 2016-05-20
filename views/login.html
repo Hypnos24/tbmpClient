@@ -15,7 +15,7 @@
 		<div class="mui-content">
 			<h1 style="text-align: center;color: #104780;margin-top:25% ;">盾构先锋 TBMP</h1>
 			<div style="margin-top: 20%;">
-				<form class="mui-input-group" style="">
+				<form class="mui-input-group" onkeydown="if(event.keyCode==13) {login();}">
 					<div class="mui-input-row">
 						<label>Input</label>
 						<input type="text" id="login_account" class="mui-input-clear" placeholder="请输入账号">
@@ -56,13 +56,11 @@
 					'password': password
 				},
 				function(data) {
-					console.log(1111);
 					if (data.respCode == 0) {
 						window.location.href = 'project-abstract.html';
 					} else {
-						console.log(0000);
 						mui.toast(data.respDesc);
-						return false;
+						return;
 					}
 				},'json');
 		}
