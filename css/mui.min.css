@@ -1497,7 +1497,7 @@ input[type=submit]:enabled:active {
 	padding: 3px 6px;
 	color: #333;
 	border-radius: 100px;
-	background-color: rgba(0, 0, 0, .15)
+	background-color: rgba(0, 0, 0, .15);
 }
 
 .mui-badge.mui-badge-inverted {

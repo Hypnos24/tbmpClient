@@ -1,304 +1,65 @@
-.head-bar{
-    text-align: center;
-    height: 7%;
-    width: 100%;
-    background-color: #ffffff;
-    min-height: 2rem;
+.main-div{
+	margin: 0 1% 3% 1%;
 }
-.bar-left{
-    height: 100%;
-    width: 25%;
-    float: left;
-    font-size: 1.1rem;
-    color: #000000;
+.main-div-one{
+	margin-top: 5%;
 }
-.back-img{
-    float: left;
-    width: 30%;
-    height: 100%;
-    margin-left: 2%;
+.main-div-one table{
+	width: 100%;
+	border: solid 1px #cbcbcb ;
 }
-.back-right-img{
-    float: left;
-    width: 30%;
-    height: 80%;
-    margin-right: 8%;
-    margin-top: 5%;
-    float: right;
+
+.main-div-one th{
+	height: 2.2rem;
+	text-align: center;
+	background-color: #dbeef4;
+	border: solid 1px #cbcbcb ;
 }
-.ps-bar-font{
-    text-align: center;
-    height: 100%;
-    width: 50%;
-    float: left;
-    font-size: 1.1rem;
-    color: #000000;
+.main-div-one tbody td{
+	height: 2.0rem;
+	text-align: center;
+	border: solid 1px #cbcbcb ;
+	background-color: #FFFFFF;
+	
 }
-.ps-bar-font table{
-    height: 100%;
-    width: 100%;
+.main-div-one-picture-g{
+	height: 0.8rem;
+	width: 0.8rem;
+	border-radius: 1rem;
+	background-color: green;
+	display:-moz-inline-box;
+	display:inline-block;
 }
-.bar-right{
-	height: 100%;
-    width: 25%;
-    float: left;
-    font-size: 1.1rem;
-    color: #000000;
-}
-.bar-right-two{
-	position: fixed;
-    font-size: 0.6rem;
-    color: #FFFFFF;
-    width: 1rem;
-	height: 1rem;
+.main-div-one-picture-r{
+	height: 0.8rem;
+	width: 0.8rem;
+	border-radius: 1rem;
 	background-color: red;
- 	border-radius: 1rem;
- 	right: 0.3rem;
- 	top:0.3rem;
- 	line-height: initial;
+	display:-moz-inline-box;
+	display:inline-block;
 }
-.ps-one-div{
-	width: 100%;
-	height: 8%;
-	float: left;
-	background-color: #ffffff;
-	margin-top: 0.5rem;
+.main-div-one-picture-y{
+	height: 0.8rem;
+	width: 0.8rem;
+	border-radius: 1rem;
+	background-color: yellow;
+	display:-moz-inline-box;
+	display:inline-block;
 }
-.ps-one-div-left{
-	width: 50%;
-	float: left;
-	background-color: #ffffff;
-	position: relative;
-	margin-top: 4%;
+.main-div-one-picture-b{
+	height: 0.8rem;
+	width: 0.8rem;
+	border-radius: 1rem;
+	background-color: blue;
+	display:-moz-inline-box;
+	display:inline-block;
 }
-.ps-one-img-left{
-	width: 40%;
-	height: 100%;
-	float: left;
-	margin-left: 10%;
+.main-div-one-picture-o{
+	height: 0.8rem;
+	width: 0.8rem;
+	border-radius: 1rem;
+	background-color: orange;
+	display:-moz-inline-box;
+	display:inline-block;
 }
-.ps-one-div-right{
-	width: 50%;
-	float: left;
-	background-color: #ffffff;
-	position: relative;
-}
-
-.ps-one-div-right-top-one{
-	height: 50%;
-	width: 100%;
-	float: left;
-	background-color: #ffffff;
-	color: #C5C1AA;
-	margin-top: 3%;
-}
-
-.ps-one-div-right-top-one-left{
-	height: 50%;
-	width: 50%;
-	float: left;
-	background-color: #ffffff;
-	color: #C5C1AA;
-	text-align: right;
-	margin-left: 35%;
-	font-size: x-small;
-}
-
-.ps-one-div-right-top-one-right{
-    font-size: 0.6rem;
-    color: #FFFFFF;
-	background-color: red;
- 	border-radius: 1rem;
- 	float: left;
- 	line-height: initial;
- 	margin-left:1%;
-}
-.ps-one-div-right-bottom{
-	height: 50%;
-	float: right;
-	background-color: #ffffff;
-	color: #C5C1AA;
-	font-size:small;
-	margin-right: 10%;
-	
-}
-
-.ps-two-div{
-	width: 100%;
-	height: 7%;
-	float: left;
-	background-color: #F4F4F4;
-    color: #000000;
-    padding: 0.8rem 0rem 0.8rem 0rem  ;
-    
-}
-.ps-two-div table{
-	width: 100%;
-	height: 100%;
-	margin-left: 5%;
-}
-
-.ps-three-div{
-	width: 100%;
-	float: left;
-	background-color: #F4F4F4;
-    color: #000000;
-    
-}
-
-.ps-three-div-one {
-    float: left;
-    width: 100%;
-    background-color: #FFFFFF;
-    margin-top: 1px;
-}
-
-.ps-three-div-left{
-	width: 50%;
-	height: 100%;
-	float: left;
-	background-color: #FFFFFF;
-    text-align:left;
-	
-}
-.ps-three-div-left-one{
-	float: left;
-    text-align:left;
-    padding: 0.8rem 0rem 0.8rem 0rem  ;
-    margin-left:10% ;
-}
-
-.ps-three-div-two-left{
-	width: 50%;
-	float: left;
-    text-align:left;
-    padding: 0.8rem 0rem 0.8rem 0rem  ;
-    margin-left:10% ;
-	
-}
-.ps-three-div-left-two{
-	width: 1.8rem;
-	height: 1.2rem;
-	float: left;
-	background-color: #104780;
-    text-align:center;
- 	border-radius: 0.2rem;	
- 	line-height: initial;
- 	margin-top: 0.8rem;
- 	margin-left: 0.1rem;
- 	
-}
-.ps-three-div-right-one{
-	width: 75%;
-	height: 100%;
-	float: left;
-	background-color: #FFFFFF;
-    text-align:right;
-     padding: 0.8rem 0rem 0.8rem 0rem  ;
-}
-.ps-three-div-right-two{
-	width: 1.8rem;
-	height: 1.2rem;
-	float: left;
-	background-color: #104780;
-    text-align:center;
- 	border-radius: 0.2rem;	
- 	line-height: initial;
- 	margin-top: 0.8rem;
- 	margin-left: 0.1rem;
-}
-
-.ps-three-div-check{
-	width: 1.2rem;
-	height: 1.2rem;
-	float: left;
-	background-color: greenyellow;
-    text-align:center;
- 	border-radius: 1rem;	
- 	margin-top: 0.8rem;
- 	margin-left: 0.1rem;
-}
-.ps-three-three-left{
-	width: 32%;
-	height: 100%;
-	float: left;
-	background-color: #FFFFFF;
-    text-align:left;
-	
-}
-.ps-three-div-two-left2{
-	float: left;
-    text-align:left;
-    padding: 0.8rem 0rem 0.8rem 0rem  ;
-    margin-left:15.625% ;
-	
-}
-
-.ps-three-div-left2{
-	width: 68%;
-	height: 100%;
-	float: left;
-	background-color: #FFFFFF;
-    text-align:right;
-	
-}
-.ps-three-div-right-one2{
-	height: 100%;
-	float: right;
-	background-color: #FFFFFF;
-    text-align:left;
-    padding: 0.8rem 0rem 0.8rem 0rem  ;
-    margin-right: 10%;
-}
-.ps-three-three-right{
-	width: 70%;
-	height: 100%;
-	float: left;
-	background-color: #FFFFFF;
-    text-align:left;
-	
-}
-.ps-three-three-left-one{
-	width: 100%;
-	height: 100%;
-	float: left;
-	background-color: #FFFFFF;
-    text-align:left;
-    padding-top: 5%;
-    margin-left:2rem;
-}
-.ps-three-three-right-one{
-	width: 90%;
-	height: 100%;
-	float: left;
-	background-color: #FFFFFF;
-    text-align:right;
-    padding-top: 3%;
-}
-
-.ps-new-two-div{
-	width: 100%;
-	height: 7%;
-	float: left;
-	background-color: #F4F4F4;
-    color: #000000;
-    padding: 0.8rem 0rem 0.8rem 0rem;
-}
-.ps-new-two-div table{
-	width: 100%;
-	height: 100%;
-	margin-left: 5%;
-}
-
-.ps-badge {
-	font-size: 12px;
-	line-height: 1;
-	display: inline-block;
-	padding: 3px 6px;
-	color: #333;
-	border-radius: 100px;
-	background-color: rgba(0, 0, 0, .15)
-}
-
-
 

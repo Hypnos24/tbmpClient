@@ -9,10 +9,15 @@
 		<link href="../css/login.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="../js/jquery.js"></script>
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/login.js"></script>
+		<script src="../js/common.js"></script>
 	</head>
 	<script>
-		
+		mui.init({
+			swipeBack:false //启用右滑关闭功能
+		});
 	</script>
+	
 	<body>
 		<div class="mui-content">
 			<h1 style="text-align: center;color: #104780;margin-top:25% ;">盾构先锋&nbsp;&nbsp;TBMP</h1>
@@ -30,10 +35,10 @@
 			</div>
 			<div class="l-two-div">
 				<div class="l-tl-div">
-					<input style="margin-top:0" class="float-left" type="checkbox" id="remember_login"><span class="float-left" style="color: #000000;">&nbsp;记住账号</span>
+					<input style="margin-top:0" class="float-left" type="checkbox" id="remember_account"><span class="float-left" style="color: #000000;">&nbsp;记住账号</span>
 				</div>
 				<div class="l-tl-div">
-					<input style="margin-top:0" class="float-left" type="checkbox" id="remember_login"><span class="float-left" style="color: #000000;">&nbsp;自动登录</span>
+					<input style="margin-top:0" class="float-left" type="checkbox" id="auto_login"><span class="float-left" style="color: #000000;">&nbsp;自动登录</span>
 				</div>
 			</div>
 			<div class="mui-button-row" style="margin-top: 5rem;">
@@ -42,30 +47,8 @@
 		</div>
 	</body>
 	<script>
-		function login() {
-			var username = $("#login_account").val().trim();
-			var password = $("#login_password").val().trim();
-			if(username == ""){
-				mui.toast("用户名不能为空");
-				return;
-			}if(password == ""){
-				mui.toast("密码不能为空");
-				return;
-			}
-			$.post(
-				"http://192.168.60.19:8080/tbmp/rest/users/login", {
-					'username': username,
-					'password': password
-				},
-				function(data) {
-					if (data.respCode == 0) {
-						window.location.href = 'project-abstract.html';
-					} else {
-						mui.toast(data.respDesc);
-						return;
-					}
-				},'json');
-		}
+		$(function(){
+			returnLogin();
+		})
 	</script>
-
 </html>

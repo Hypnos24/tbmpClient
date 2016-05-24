@@ -1,15 +1,81 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-</head>
-<body>
-	<h1>登陆成功</h1>
-</body>
-<script>
-	var array = [1,2,3]
-	mui.each(array,function(index,item){
-  console.log(item*item);
-}) 
-</script>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/common.js"></script>
+	</head>
+	<script>
+		mui.init({
+			swipeBack: false //启用右滑关闭功能
+		});
+	</script>
+
+	<body onload="check_auto_login()">
+		<div class="mui-content">
+			<div style="text-align: center;" id = "prelogin_view">
+				<a><span class="mui-spinner" style="margin-top: 100%;"></span></a>
+			</div>
+		</div>
+	</body>
+	<script>	
+		function check_auto_login(){
+			var username = localStorage.getItem("username");
+			var password = localStorage.getItem("password");
+			var lastLoginDate = localStorage.getItem("lastLoginDate");
+			var isAutoLogin = localStorage.getItem("isAutoLogin")
+			var nowDate = new Date().getTime();
+			if(isNotBlank(username) && isNotBlank(password) && isNotBlank(lastLoginDate) && isAutoLogin == 1){
+				//自动登录超时
+				if(nowDate - lastLoginDate > 7*24*60*60*1000 ){
+					localStorage.removeItem("password");
+					localStorage.removeItem("lastLoginDate");
+					mui.toast("您太久没登录，请重新登录！");
+					mui.openWindow({
+						url:"views/login.html",
+						id:"login"
+					});
+				}
+				mui.ajax(
+					'http://192.168.60.19:8080/tbmp/rest/users/login',{
+						type:'post',
+						data:{
+							"username": username,
+							"password": password
+						},
+						dataType:'json',
+						timeout:10000,
+						success:function(data){
+							if(data.respCode ==0){
+								//存储session，更新最后登录时间
+								localStorage.setItem("lastLoginDate",nowDate);
+								sessionStorage.setItem("user",JSON.stringify(data));
+								mui.openWindow({
+									url:'views/project-summary.html',
+									id:'summary'
+								});
+							}else{
+								mui.openWindow({
+									url:'views/login.html',
+									id:'login'
+								});
+							}
+						},
+						error:function(e){
+							mui.toast("连接超时，请稍后再试！");
+						}
+					});
+				
+				
+			}else{
+				window.location.href ="views/login.html";
+			}
+		}
+	</script>
+
 </html>

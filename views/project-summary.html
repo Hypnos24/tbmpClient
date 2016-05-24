@@ -1,179 +1,100 @@
 <!DOCTYPE html>
 <html>
-	<head class="mui-bar mui-bar-nav">
+	<head>
 		<meta charset="UTF-8">
-		<title>项目汇总</title>
-		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<link href="../css/common.css" rel="stylesheet" type="text/css" />
-		<link href="../css/project-summary.css" rel="stylesheet" type="text/css" />
+		<title>项目摘要</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/project-summary.css" type="text/css" />
 		<link rel="stylesheet" href="../css/mui.min.css">
-		<link rel="stylesheet" href="../css/iconfont.css" />
 		<script type="text/javascript" src="../js/jquery.js"></script>
 		<script src="../js/mui.min.js"></script>
-		<script>
-			mui.init({
-				swipeBack:true //启用右滑关闭功能
-			});
-		</script>
-		<script>
-			document.getElementById('return_ project_').addEventListener('tap', function() {
-			  		//打开关于页面
-			  		mui.openWindow({
-				    	url: 'project-abstract.html', 
-			    		id:'abstract'
-	  			});
-			});
-			
-			var wv = plus.webview.open('project-abstract.html','abstract',{'popGesture':'close'});
-			var wv=plus.webview.currentWebview();
-			// 关闭侧滑返回功能
-			wv.setStyle({'popGesture':'none'});
-			// 侧滑返回后关闭webview
-			wv.setStyle({'popGesture':'close'});
-			// 侧滑返回后隐藏webview
-			wv.setStyle({'popGesture':'hide'});
-		</script>
 	</head>
+
 	<body>
 		<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id = "return_ project_"></a>
-			<h1 class="mui-title">项目汇总</h1>
-			<a class="mui-icon iconfont icon-icon13 mui-pull-right" style="color: #C7C7CC;"><span class="mui-badge" style="top: 5px;left: 70%;">9</span></a>
-			
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="btn_return_login"></a>
+			<h1 class="mui-title">项目摘要</h1>
+			<button type="button" id="toDetails_" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">汇总</button>
 		</header>
 		<div class="mui-content">
-				<div class="ps-one-div">
-					<div class="ps-one-div-left"><img class="ps-one-img-left" src="../images/shanghai-subway.png"></div>
-					<div class="ps-one-div-right">
-							<div class="ps-one-div-right-top-one">
-								<div class="ps-one-div-right-top-one-left">代办事项</div>
-								<div class="ps-one-div-right-top-one-right">12</div>
-							</div>
-						<div class="ps-one-div-right-bottom"><span>5号线延伸线</span></div>
-					</div>
+			<div class="main-div">
+				<div class="main-div-one" id="main_project_">
 				</div>
-				<div class="ps-two-div">
-					<span style="margin-left: 5%;">第一标段</span>
+				<div class="mui-content-padded" style="margin-top: 2rem;" id="to_all_project_detail">
 				</div>
-				<div class="ps-three-div">
-					
-					<div class="ps-three-div-one">
-						<div class="ps-three-div-left">   
-							 <div class="ps-three-div-left-one">
-							 	<span>当前推进环数</span>
-							 </div>
-							 
-							 <div class="ps-three-div-left-two">
-							 	<span style="color: #FFFFFF">12</span>
-							 </div>
-						</div>
-						
-						<div class="ps-three-div-left">
-							<div class="ps-three-div-right-one">
-								今日推进环数
-							</div>
-							<div class="ps-three-div-right-two">
-							 	<span style="color: #FFFFFF">12</span>
-							 </div>
-						</div>
-					</div>
-					
-					<div class="ps-three-div-one">
-						<div class="ps-three-div-left">   
-							 <div class="ps-three-div-two-left">
-							 	<span style="color: #C5C1AA;">设备状态</span>
-							 </div>
-							 
-						</div>
-						
-						<div class="ps-three-div-left">
-							<div class="ps-three-div-right-one">
-								正常
-							</div>
-							<div class="ps-three-div-check">
-							 	<span style="color: ghostwhite">√</span>
-							 </div>
-						</div>
-					</div>
-					
-					<div class="ps-three-div-one">
-						<div class="ps-three-three-left">   
-							 <div class="ps-three-div-two-left2">
-							 	<span style="color: #C5C1AA;">预警状态</span>
-							 </div>
-						</div>
-						
-						<div class="ps-three-div-left2">
-							<div class="ps-three-div-right-one2">
-							130环处有电力管线，工程预警3级
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="ps-new-two-div">
-					<span style="margin-left: 5%;">第二标段</span>
-				</div>
-				<div class="ps-three-div">
-					
-					<div class="ps-three-div-one">
-						<div class="ps-three-div-left">   
-							 <div class="ps-three-div-left-one">
-							 	当前推进环数
-							 </div>
-							 
-							 <div class="ps-three-div-left-two">
-							 	<span style="color: #FFFFFF">125</span>
-							 </div>
-						</div>
-						
-						<div class="ps-three-div-left">
-							<div class="ps-three-div-right-one">
-								今日推进环数
-							</div>
-							<div class="ps-three-div-right-two">
-							 	<span style="color: #FFFFFF">8</span>
-							 </div>
-						</div>
-					</div>
-					
-					<div class="ps-three-div-one">
-						<div class="ps-three-div-left">   
-							 <div class="ps-three-div-left-one">
-							 	<span style="color: #C5C1AA;">设备状态</span>
-							 </div>
-							 
-						</div>
-						
-						<div class="ps-three-div-left">
-							<div class="ps-three-div-right-one">
-								正常
-							</div>
-							<div class="ps-three-div-check">
-							 	<span style="color: ghostwhite">√</span>
-							 </div>
-						</div>
-					</div>
-					
-					<div class="ps-three-div-one">
-						<div class="ps-three-div-left">   
-							 <div class="ps-three-div-left-one">
-							 	<span style="color: #C5C1AA;">预警状态</span>
-							 </div>
-							 
-						</div>
-						
-						<div class="ps-three-div-left">
-							<div class="ps-three-div-right-one">
-								无预警
-							</div>
-							<div class="ps-three-div-check">
-							 	<span style="color: ghostwhite">√</span>
-							 </div>
-						</div>
-					</div>
-				</div>
-				
-		</div>		
+			</div>
+		</div>
 	</body>
+	
+	<script>
+		mui.init({
+			swipeBack:false //启用右滑关闭功能
+		});
+	</script>
+
+	<script>
+		$(function() {
+			$.post(
+				"http://192.168.60.19:8080/tbmp/rest/projects/summary", {},
+				function(data) {
+					var result = "";
+					if (data.respCode == 0) {
+						result += '<table>';
+						result += '<thead><th width = "35%">项目 </th><th width = "17%">进度 </th><th width = "17%">设备</th><th width = "17%">预警 </th><th>风险 </th></thead>';
+						result += '<tbody>';
+						for (var i = 0; i < data.results.length; i++) {
+							result += '<tr><td>' + data.results[i].projectName + '</td>';
+							if (data.results[i].process == 1) {
+								result += '<td><div class="main-div-one-picture-o"></div></td>';
+							} else {
+								result += '<td><div class="main-div-one-picture-r"></div></td>';
+							}
+							if (data.results[i].device == 1) {
+								result += '<td><div class="main-div-one-picture-o"></div></td>';
+							} else {
+								result += '<td><div class="main-div-one-picture-r"></div></td>';
+							}
+							if (data.results[i].warning == 1) {
+								result += '<td><div class="main-div-one-picture-o"></div></td>';
+							} else {
+								result += '<td><div class="main-div-one-picture-r"></div></td>';
+							}
+							if (data.results[i].risk == 1) {
+								result += '<td><div class="main-div-one-picture-o"></div></td>';
+							} else {
+								result += '<td><div class="main-div-one-picture-r"></div></td>';
+							}
+							result += '</tr>';
+						}
+						result += '</tbody></table>';
+						$("#main_project_").html(result);
+					} else {
+						result += '<h1>暂无项目</h1>';
+						$("#main_project_").html(result);
+						$("#to_all_project_detail").hide();
+					}
+				}
+			);
+		});
+		
+	</script>
+	
+	<script>
+		document.getElementById("toDetails_").addEventListener("tap", function() {
+	  //打开关于页面
+		mui.openWindow({
+			url:"project-details.html", 
+		    id:"details"
+		  });
+		});
+		
+		document.getElementById("btn_return_login").addEventListener("tap",function (){
+			mui.openWindow({
+			url:"login.html", 
+		    id:"login"
+		  });
+		});
+	</script>
 </html>
