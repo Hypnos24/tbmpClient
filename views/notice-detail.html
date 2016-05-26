@@ -3,39 +3,58 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>通知公告详情</title>
-		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<link href="../css/common.css" rel="stylesheet" type="text/css" />
-		<link href="../css/notice-detail.css" rel="stylesheet" type="text/css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="../css/mui.min.css">
 		<script type="text/javascript" src="../js/jquery.js"></script>
 		<script src="../js/mui.min.js"></script>
-		<style>
-			.ca-body{
-				background-color: #EBEBEB;overflow: hidden;
-			}
-			.clear{
-				clear: both;
-			}
-		</style>
 	</head>
-	<body class="w-body ca-body">
-		<div style="height: 2rem;width: 100%;background-color: #FFFFFF;float: left;color: blue;padding-left: 1rem;"> < </div><!-- 返回按钮-->
-		<div style="width: 100%;text-align: center;background-color: #FFFFFF;padding: 1.2rem 0 0.8rem 0;">
-				请提交2015年的年终总结
-		</div>
-		<div style="height: 2rem;width: 100%;text-align: center; background-color: #FFFFFF;">
-			<div style="width: 34%;float: left;text-align: center;">通知</div>
-			<div style="width: 32%;;float: left;text-align: center;">王经理</div>
-			<div style="width: 34%;;float: left;text-align: center;">1月12日</div>
-		</div>
-		<div style="background-color: #FFFFFF;">
-			<div style="width: 90%;background-color: #FFFFFF;margin: auto;">
-				按照公司规定。。。。搜带好傲世地方奥地方和；奥斯电话费地方电话费奥斯丁和覅；哦多少分奥斯丁和覅卡神
-				经病的分离开家三代付款啦十点半弗兰克萨打吧付款拉萨的脚步付款三发<br><br><br>
-	
-			 <a href="#">附件</a>
+	<style type="text/css">
+		.body-font{
+			font: "微软雅黑";
+			font-size: large;
+		}
+	</style>
+	<body class="body-font">
+		<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="btn_return_notice"></a>
+			<h1 class="mui-title">通告通知详情 </h1>
+		</header>
+		<div class="mui-content">
+			<div style="width: 100%;background-color: #FFFFFF;text-align: center;padding: 1rem 0 0.2rem 0;margin-top: 15px;border-top:0.5px solid #c8c7cc;">
+				<span style="font-size: large;">请提交2015年的年度总结</span>
 			</div>
-				
+			<div style="width: 100%;height: 10%;background-color: #FFFFFF;text-align: center;line-height: 30px;">
+				<div style="width: 80%;margin-left: auto;margin-right: auto;">
+					<table width="100%">
+						<thead>
+						<th width="33.3%" style="text-align: left;color: #007AFF">通知</th>
+						<th width="33.3%" style="color: purple">王经理</th>
+						<th width="33.3%" style="text-align: right;color: orange">1月12日</th>
+						</thead>
+					</table>
+				</div>
+			</div>
+			
+			<div style="width: 100%;margin-left: auto;margin-right:auto;background-color: #FFFFFF;margin-top: 5px;border-bottom:0.5px solid #c8c7cc;">
+				<div style="width: 90%;margin-left: auto;margin-right: auto;padding:10px 0 10px 0;line-height: 1.5;">
+					<span>接到公司管理层通知，2015年年中小姐，请在本月底(1月31日)之前提交，请发送邮件到每个人的部门经理处，并抄送给管理部王部长，逾期不交者讲获得管理部约谈机会。</span>
+					<h4 style="margin-top: 30px;"><a>相关附件</a></h4>
+				</div>
+			</div>
 		</div>
 	</body>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		
+		document.getElementById("btn_return_notice").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"notice.html",
+				id:"notice.html"
+			});
+		})
+	</script>
 </html>

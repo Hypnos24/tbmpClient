@@ -1658,7 +1658,7 @@ input[type=submit]:enabled:active {
 	top: -1px
 }
 
-.mui-table-view-icon .mui-table-view-cell .mui-navigate-right .mui-icon {
+.mui-table-view-icon .mui-table-view-cell . .mui-icon {
 	font-size: 20px;
 	margin-top: -1px;
 	margin-right: 5px;
@@ -1685,7 +1685,7 @@ input[type=submit]:enabled:active {
 	margin-right: -65px
 }
 
-.mui-table-view-radio .mui-table-view-cell .mui-navigate-right:after {
+.mui-table-view-radio .mui-table-view-cell .:after {
 	font-size: 30px;
 	font-weight: 600;
 	right: 9px;
@@ -1693,7 +1693,7 @@ input[type=submit]:enabled:active {
 	color: #007aff
 }
 
-.mui-table-view-radio .mui-table-view-cell.mui-selected .mui-navigate-right:after {
+.mui-table-view-radio .mui-table-view-cell.mui-selected .:after {
 	content: '\e472'
 }
 
@@ -1816,8 +1816,8 @@ input[type=submit]:enabled:active {
 	background-color: #fff
 }
 
-.mui-table-view-cell>.mui-slider-handle .mui-navigate-right:after,
-.mui-table-view-cell>.mui-slider-handle.mui-navigate-right:after {
+.mui-table-view-cell>.mui-slider-handle .:after,
+.mui-table-view-cell>.mui-slider-handle.:after {
 	right: 0
 }
 
