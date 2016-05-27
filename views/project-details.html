@@ -29,7 +29,7 @@
 			<div class="ps-one-div">
 				<div class="ps-one-div-left"><img src="../images/shanghai-subway.png"></div>
 				<div class="ps-one-div-right">
-						<div class="ps-one-div-right-top-one">
+						<div class="ps-one-div-right-top-one" id="to_to_do">
 							<span>代办事项</span>
 							<a><span class="ps-badge-circle">9</span></a>
 						</div>
@@ -115,6 +115,14 @@
 		  		mui.openWindow({
 			    	url: "notice.html", 
 		    		id: "notice.html"
+  			});
+		});
+		
+		document.getElementById("to_to_do").addEventListener("tap", function() {
+		  		//打开关于页面
+		  		mui.openWindow({
+			    	url: "to-do.html", 
+		    		id: "to-do.html"
   			});
 		});
 	</script>

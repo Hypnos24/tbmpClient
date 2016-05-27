@@ -10,16 +10,10 @@
 		<script type="text/javascript" src="../js/jquery.js"></script>
 		<script src="../js/mui.min.js"></script>
 	</head>
-	<style type="text/css">
-		.body-font{
-			font: "微软雅黑";
-			font-size: large;
-		}
-	</style>
-	<body class="body-font">
+	<body>
 		<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;">
-			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="btn_return_notice"></a>
-			<h1 class="mui-title">通告通知详情 </h1>
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="return_notice"></a>
+			<h1 class="mui-title">公告详情 </h1>
 		</header>
 		<div class="mui-content">
 			<div style="width: 100%;background-color: #FFFFFF;text-align: center;padding: 1rem 0 0.2rem 0;margin-top: 15px;border-top:0.5px solid #c8c7cc;">
@@ -50,7 +44,7 @@
 			swipeBack:true //启用右滑关闭功能
 		});
 		
-		document.getElementById("btn_return_notice").addEventListener("tap",function(){
+		document.getElementById("return_notice").addEventListener("tap",function(){
 			mui.openWindow({
 				url:"notice.html",
 				id:"notice.html"
