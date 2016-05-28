@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script src="../js/mui.min.js"></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="return_to_do_detail"></a>
+			<h1 class="mui-title">请选择人员</h1>
+		</header>
+
+		<div class="mui-content">
+			<div style="width: 92%;text-align: center;margin-top:15px;margin-left: auto;margin-right:auto ;">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td style="width:33.3%; ">
+							<button style="font-size:18px;margin: 2%;padding: 5% 16%; background-color: #c8eef4">张经理</button>
+						</td>
+						<td style="width:33.3%;">
+							<button style="font-size:18px;margin: 2%;padding: 5% 16%; background-color: #c8eef4">林正行</button>
+						</td>
+						<td>
+							<button style="font-size:18px;margin: 2%;padding: 5% 16%; background-color: #c8eef4">王经理</button>
+						</td>
+					</tr>
+					<tr>
+						<td style="width:33.3%;">
+							<button style="font-size:18px;margin: 2%;padding: 5% 16%; background-color: #c8eef4">张立明</button>
+						</td>
+						<td style="width:33.3%;">
+							<button style="font-size:18px;margin: 2%;padding: 5% 16%; background-color: #c8eef4">王怜花</button>
+						</td>
+						<td>
+							<button style="font-size:18px;margin: 2%;padding: 5% 16%; background-color: #c8eef4">李总</button>
+						</td>
+					</tr>
+					<tr>
+						<td style="width:33.3%;">
+							<button style="font-size:18px;margin: 2%;padding: 5% 16%; background-color: #c8eef4">巴彦</button>
+						</td>
+						<td style="width:33.3%;">
+							<button style="font-size:18px;margin: 2%;padding: 5% 16%; background-color: #c8eef4">周先志</button>
+						</td>
+						<td>
+							<button style="font-size:18px;margin: 2%;padding: 5% 16%; background-color: #c8eef4">饶松</button>
+						</td>
+					</tr>
+					<tr>
+						<td style="width:33.3%;">
+							<button style="font-size:18px;margin: 2%;padding: 5% 16%; background-color: #c8eef4">艾建平</button>
+						</td>
+						<td style="width:33.3%;">
+							<button style="font-size:18px;margin: 2%;padding: 5% 16%; background-color: #c8eef4">徐镇江</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+	</body>
+
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+		
+		document.getElementById("return_to_do_detail").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"to-do-detail.html",
+				id:"to-do-detail.html"
+			});
+		});
+	</script>
+
+</html>

@@ -22,10 +22,10 @@
 		</header>
 		<nav class="mui-bar mui-bar-tab">
 			<div class="mui-input-row" >
-				<input type="text" class="mui-input-clear" style="margin-bottom: 0;"  placeholder="回复..." >
+				<input type="text" class="mui-input-clear" style="margin-bottom: 0;"  placeholder="回复..." onfocus="to_bottom();">
 			</div>
 		</nav>
-		<div class="mui-content">
+		<div class="mui-content" id="mui-content">
 			<div style="width: 100%;background-color: #FFFFFF;text-align: center;padding: 1rem 0 0.2rem 0;margin-top: 15px;border-top:0.5px solid #c8c7cc;">
 				<span style="font-size: large;">请提交2015年的年度总结</span>
 			</div>
@@ -51,7 +51,7 @@
 					<span>接到公司管理层通知，2015年年中小姐，请在本月底(1月31日)之前提交，请发送邮件到每个人的部门经理处，并抄送给管理部王部长，逾期不交者讲获得管理部约谈机会。</span>
 				</div>
 				<div style="text-align: center;padding: 5%;">
-					<button type="button" class="mui-btn mui-btn-warning" style="width: 82px;">移交</button>
+					<button id="transfer_to" type="button" class="mui-btn mui-btn-warning" style="width: 82px;">移交</button>
 					<button type="button" class="mui-btn mui-btn-warning">关闭问题</button>
 				</div>
 			</div>
@@ -101,5 +101,17 @@
 				id:"to-do.html"
 			});
 		});
+		
+		document.getElementById("transfer_to").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"to-do-transfer.html",
+				id:"to-do-transfer.html"
+			});
+		});
+	</script>
+	<script>
+		function to_bottom(){
+			$('#mui-content').scrollTop($('#mui-content')[0].scro)
+		}
 	</script>
 </html>
