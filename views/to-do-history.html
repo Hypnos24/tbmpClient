@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>代办事项历史</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script src="../js/mui.min.js"></script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="return_to_do"></a>
+			<h1 class="mui-title">待办事项历史</h1>
+		</header>
+	</body>
+	<script>
+		mui.init(){
+			swipeBack:true //启用右滑关闭功能
+		};
+		
+		document.getElementById("return_to_do").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"to-do.html",
+				id:"to-do.html"
+			});
+		});
+	</script>
+</html>
