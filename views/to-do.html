@@ -28,7 +28,7 @@
 			<div style="width: 100%;">
 				<ul class="mui-table-view" style="line-height: 1;">
 			        <li class="mui-table-view-cell">
-		                <a class="mui-navigate-right" id="aaaa">
+		                <a class="mui-navigate-right" id="to_do_detail">
 		                    <h5 style="font-size:16px;color: #000000;">请提交2015工作总结</h5>
 		                    <span style="font-size:14px;padding-right:5%;color: #007AFF;">王经理</span><span style="color: orange;font-size:14px;padding-right:5%;">1月12日</span><span style="color: red;font-size:14px;">日常工作</span>
 		                </a>
@@ -78,4 +78,17 @@
 				
 		</div>
 	</body>
+	
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		
+		document.getElementById("to_do_detail").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"to-do-detail.html",
+				id:"to-do-detail.html"
+			});
+		})
+	</script>
 </html>

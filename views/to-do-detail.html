@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>通知公告详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script src="../js/mui.min.js"></script>
+	</head>
+		<style type="text/css">
+			.mui-bar-tab{
+				height: 38px;
+			}
+		</style>
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="return_to_do"></a>
+			<h1 class="mui-title">待办事项详情</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<div class="mui-input-row" >
+				<input type="text" class="mui-input-clear" style="margin-bottom: 0;"  placeholder="回复..." >
+			</div>
+		</nav>
+		<div class="mui-content">
+			<div style="width: 100%;background-color: #FFFFFF;text-align: center;padding: 1rem 0 0.2rem 0;margin-top: 15px;border-top:0.5px solid #c8c7cc;">
+				<span style="font-size: large;">请提交2015年的年度总结</span>
+			</div>
+			
+			<div style="width: 100%;height: 10%;background-color: #FFFFFF;text-align: center;line-height: 30px;">
+				<div style="width: 80%;margin-left: auto;margin-right: auto;">
+					<table width="100%">
+						<thead>
+						<th width="33.3%" style="text-align: left;color: #007AFF">通知</th>
+						<th width="33.3%" style="color: purple">王经理</th>
+						<th width="33.3%" style="text-align: right;color: orange">1月12日</th>
+						</thead>
+					</table>
+				</div>
+			</div>
+			
+			<div style="width: 100%;text-align: left;height: 25px;line-height: 25px;">
+				<span style="padding-left:15px">详细内容</span>
+			</div>
+			
+			<div style="width: 100%;margin-left: auto;margin-right:auto;background-color: #FFFFFF;border-bottom:0.5px solid #c8c7cc;">
+				<div style="width: 92%;margin-left: auto;margin-right: auto;padding:10px 0 10px 0;line-height: 1.5;">
+					<span>接到公司管理层通知，2015年年中小姐，请在本月底(1月31日)之前提交，请发送邮件到每个人的部门经理处，并抄送给管理部王部长，逾期不交者讲获得管理部约谈机会。</span>
+				</div>
+				<div style="text-align: center;padding: 5%;">
+					<button type="button" class="mui-btn mui-btn-warning" style="width: 82px;">移交</button>
+					<button type="button" class="mui-btn mui-btn-warning">关闭问题</button>
+				</div>
+			</div>
+			
+			<div style="width: 100%;text-align: left;height: 25px;line-height: 25px;">
+				<span style="padding-left:15px">回复</span>
+			</div>
+			
+			<div style="width: 100%;">
+				<ul class="mui-table-view" style="line-height: 1;">
+			        <li class="mui-table-view-cell">
+			        	<div class="mui-table">
+			                <div class="mui-table-cell mui-col-xs-8">
+			                    <h5 style="font-size:16px;color: #007AFF;">王经理</h5>
+			                    <span style="font-size:16px;padding-right:5%;color: #000000;">速度!!</span>
+			                </div>
+			                <div class="mui-table-cell mui-col-xs-3 mui-text-right">
+			                    <span class="mui-h5" style="font-size:16px;color: #007AFF;">上午09:35</span>
+			                </div>
+		            	</div>
+		            </li>
+			        <li class="mui-table-view-cell">
+			        	<div class="mui-table">
+			                <div class="mui-table-cell mui-col-xs-8">
+			                    <h5 style="font-size:16px;color: #007AFF;">林正行（我）</h5>
+			                    <span style="font-size:16px;padding-right:5%;color: #000000;">领导，我晚上提交！！</span>
+			                </div>
+			                <div class="mui-table-cell mui-col-xs-3 mui-text-right">
+			                    <span class="mui-h5" style="font-size:16px;color: #007AFF;">下午09:42</span>
+			                </div>
+		            	</div>
+		            </li>
+		            
+		   		</ul>
+			</div>
+		</div>
+		
+	</body>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		
+		document.getElementById("return_to_do").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"to-do.html",
+				id:"to-do.html"
+			});
+		});
+	</script>
+</html>
